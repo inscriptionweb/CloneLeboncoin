@@ -1,0 +1,24 @@
+#liens vers page_accueil
+keny_leboncoin_accueil:
+    path:     /accueil
+    defaults: { _controller: kenyLeboncoinBundle:Accueil:accueil }
+
+#liens vers page_accueil
+keny_leboncoin_annonce:
+    path:     /annonce
+    defaults: { _controller: kenyLeboncoinBundle:Annonce:createAnnonce }
+
+#liens vers page_accueil
+keny_leboncoin_offre:
+    path:     /offre
+    defaults: { _controller: kenyLeboncoinBundle:Offre:listerOffre }
+
+#liens vers page_accueil
+keny_leboncoin_demande:
+    path:     /demande
+    defaults: { _controller: kenyLeboncoinBundle:Demande:listerDemande } 
+
+#liens vers page d'aide
+keny_leboncoin_help:
+    path:     /help
+    defaults: { _controller: kenyLeboncoinBundle:Help:help }

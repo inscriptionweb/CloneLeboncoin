@@ -1,0 +1,51 @@
+{# on herite du layout dans ressources view #}
+{%extends "kenyLeboncoinBundle::layout.html.twig"%} 
+
+{% block section %}
+          
+             
+              {#formulaire de creation d'une annonce#}
+              <form action="{{ path("keny_leboncoin_annonce") }}" method="post" align="center">
+               <fieldset class="scheduler-border"> 
+                 <legend class="scheduler-border"> CATHEGORIE </legend>
+
+                   {{ form_label(form.cathegorie) }} {{ form_widget(form.cathegorie) }}<br>
+                    {{ form_label(form.typeannonce) }} {{ form_widget(form.typeannonce) }}
+               </fieldset>
+
+               <fieldset class="scheduler-border"> 
+               <legend class="scheduler-border">LOCALISATION</legend>
+                {{ form_widget(form.departement) }}
+               </fieldset>
+               
+
+              <fieldset class="scheduler-border"> 
+               <legend class="scheduler-border">VOTRE ANNONCE</legend>
+               {{ form_label(form.date) }} {{ form_widget(form.date) }}
+               {{ form_label(form.titre) }} {{ form_widget(form.titre) }}
+               {{ form_label(form.description) }} {{ form_widget(form.description) }}
+               {{ form_label(form.prix) }} {{ form_widget(form.prix) }}
+               </fieldset>
+
+               <fieldset class="scheduler-border"> 
+               <legend class="scheduler-border">VOS INFORMATIONS</legend>
+               {#{{ form_rest(form) }}#}
+                {{ form_widget(form.annonceur) }}
+               </fieldset>
+
+               <fieldset class="scheduler-border"> 
+               <legend class="scheduler-border">PHOTOS</legend>
+               {{ form_widget(form.image) }}
+               </fieldset>
+
+                <fieldset class="scheduler-border"> 
+               <legend class="scheduler-border"></legend>
+                   <input type="submit" value="VALIDER" align="center">
+               </fieldset>
+               
+
+
+              <form>
+
+
+{% endblock %}
